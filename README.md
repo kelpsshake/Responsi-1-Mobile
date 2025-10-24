@@ -8,7 +8,7 @@
 
 ## Demo Aplikasi
 Berikut video demo aplikasi:  
-[![Tonton Video Demo](https://github.com/user-attachments/assets/3f2d6e8b-9a12-4559-9e87-e4fcc3ca9040]
+[video demo](https://github.com/user-attachments/assets/3f2d6e8b-9a12-4559-9e87-e4fcc3ca9040)
 
 ## Alur Data (Dari API ke Tampilan)
 Berikut penjelasan alur data dalam aplikasi:
