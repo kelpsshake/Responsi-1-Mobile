@@ -31,13 +31,27 @@ class PlayerAdapter(
         holder.name.text = player.name
         holder.nationality.text = player.nationality
 
-        val colorRes = when (player.position?.lowercase()) {
-            "goalkeeper" -> android.graphics.Color.YELLOW
-            "defence" -> android.graphics.Color.BLUE
-            "midfield" -> android.graphics.Color.GREEN
-            "forward" -> android.graphics.Color.RED
+        val position = player.position?.lowercase() ?: ""
+        val colorRes = when {
+            // Goalkeeper
+            position.contains("goalkeeper") -> android.graphics.Color.YELLOW
+
+            // Defender
+            position.contains("defence") ||
+                    position.contains("back") -> android.graphics.Color.BLUE
+
+            // Midfielder
+            position.contains("midfield") -> android.graphics.Color.GREEN
+
+            // Forward / Winger / Offence
+            position.contains("forward") ||
+                    position.contains("winger") ||
+                    position.contains("offence") -> android.graphics.Color.RED
+
+            // Default (kalau posisi tidak dikenal)
             else -> android.graphics.Color.LTGRAY
         }
+
         holder.cardView.setCardBackgroundColor(colorRes)
 
         holder.itemView.setOnClickListener { onClick(player) }
