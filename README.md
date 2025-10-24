@@ -8,7 +8,9 @@
 
 ## Demo Aplikasi
 Berikut video demo aplikasi:  
-[video demo](https://github.com/user-attachments/assets/3f2d6e8b-9a12-4559-9e87-e4fcc3ca9040)
+https://github.com/user-attachments/assets/0579c79a-65aa-4775-8346-75274527296e
+
+
 
 ## Alur Data (Dari API ke Tampilan)
 API diperoleh dari football-data.org, setelah itu menggunakan Postman untuk mendapatkan data-datanya menggunakan API Key yang telah terdaftar.
