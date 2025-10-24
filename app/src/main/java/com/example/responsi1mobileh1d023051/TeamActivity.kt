@@ -20,13 +20,10 @@ class TeamActivity : AppCompatActivity() {
         binding = ActivityTeamBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Setup RecyclerView
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Panggil data dari API
         viewModel.getTeamData()
 
-        // Observe data dari ViewModel
         viewModel.teamData.observe(this) { team ->
             if (team != null && team.squad != null) {
                 val adapter = PlayerAdapter(team.squad) { player ->
